@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#pid{
+				font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var p=document.getElementById('pid');
+				var s=30;					
+				function show(){					
+					p.innerHTML=s+'秒';
+					if(s==0){
+						alert('倒计时结束！');
+						clearInterval(t);
+					}
+					s--;
+				}
+				show();
+				var t=setInterval(show,1000);
+			}
+		</script>
+	</head>
+	<body>
+		<p id="pid"></p>
+	</body>
+</html>
